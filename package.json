@@ -1,0 +1,54 @@
+{
+  "name": "telegram-tree",
+  "version": "1.0.0",
+  "description": "Telegram Bot that creates link-tree blog/resume page for you",
+  "main": "index.js",
+  "scripts": {
+    "bot": "node bot/index.js",
+    "api": "node api/index.js",
+    "ui": "webpack serve --hot --config webpack.dev.js",
+    "ui-build": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mainarthur/telegram-tree.git"
+  },
+  "keywords": [
+    "telegram",
+    "resume",
+    "js",
+    "link",
+    "blog"
+  ],
+  "author": "masterarthur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mainarthur/telegram-tree/issues"
+  },
+  "homepage": "https://github.com/mainarthur/telegram-tree#readme",
+  "dependencies": {
+    "bull": "^3.22.7",
+    "fastify": "^3.17.0",
+    "node-telegram-bot-api": "^0.53.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "telegram-escape": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@types/bull": "^3.15.1",
+    "@types/node": "^15.6.2",
+    "@types/node-telegram-bot-api": "^0.51.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.27.0",
+    "html-webpack-plugin": "^5.3.1",
+    "prettier": "^2.3.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

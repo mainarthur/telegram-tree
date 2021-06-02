@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outFile": "./built/out.js",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
+    "checkJs": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["./node_modules/**/*"]
+}
