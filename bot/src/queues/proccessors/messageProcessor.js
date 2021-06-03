@@ -3,7 +3,7 @@ const logger = require("../../logger");
 const commandParser = require("../../util/commandParser");
 const commandExecuter = require("./executers/commandExecuter");
 
-const { ADMIN_ID } = require("../../../../config.json");
+const { ADMIN_IDS } = require("../../../../config.json");
 
 /**
  *  @param {import('bull').Job<import("node-telegram-bot-api").Message>}  job
@@ -14,7 +14,7 @@ const messageJobProcessor = async ({ data: message }) => {
       from: { id },
     } = message;
 
-    if (id !== ADMIN_ID) return;
+    if (!ADMIN_IDS.includes(id)) return;
 
     const command = commandParser(message);
 

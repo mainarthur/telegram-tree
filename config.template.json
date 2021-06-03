@@ -16,5 +16,12 @@
       "max": 30
     }
   },
-  "ADMIN_ID": 5000
+  "POSTGRESS": {
+    "user": "",
+    "password": "",
+    "database": "telegramtree",
+    "host": "localhost",
+    "port": 5432
+  },
+  "ADMIN_IDS": [295162096]
 }
