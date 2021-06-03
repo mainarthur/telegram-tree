@@ -33,7 +33,7 @@ fastify.get(
       };
     }
 
-    return await postRepository.getPosts(pageNumber);
+    return postRepository.getPosts(pageNumber);
   }
 );
 
