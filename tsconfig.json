@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outFile": "./built/combined.js",
     "target": "ESNext",
     "lib": ["ESNext", "DOM"],
     "allowJs": true,
