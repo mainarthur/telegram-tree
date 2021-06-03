@@ -9,13 +9,18 @@ class Post {
   constructor({ id, name, description, link }) {
     if (typeof name !== "string") throw new Error('"name" must be a string');
     if (typeof link !== "string") throw new Error('"link" must be a string');
-    if (typeof id !== "number" && id !== undefined)
-      throw new Error('"id" must be a number');
-    if (typeof description !== "string" && description !== undefined)
-      throw new Error('"description" must be a string');
-    this.id = id;
+
+    if (id !== null && id !== undefined) {
+      if (typeof id !== "number") throw new Error('"id" must be a number');
+      this.id = id;
+    }
+    if (description !== null && description !== undefined) {
+      if (typeof description !== "string")
+        throw new Error('"description" must be a string');
+      this.description = description;
+    }
+
     this.name = name;
-    this.description = description;
     this.link = link;
   }
 
