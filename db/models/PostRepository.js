@@ -14,6 +14,15 @@ class PostRepository {
     this.options = { ...PostRepository.DEFAULT_OPTIONS, ...options };
   }
 
+  load() {
+    return this.pool.query(`CREATE TABLE IF NOT EXISTS posts (
+      id serial PRIMARY KEY,
+      name TEXT,
+      description TEXT,
+      link TEXT
+    );`);
+  }
+
   /**
    * @param {Number} [page]
    * @returns {Promise<Post[]>}

@@ -5,4 +5,6 @@ const PostRepository = require("./models/PostRepository");
 
 const pool = new Pool(POSTGRESS);
 
-module.exports = new PostRepository(pool);
+const postRepository = new PostRepository(pool);
+
+module.exports = postRepository;
